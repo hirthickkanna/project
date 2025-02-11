@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gray-900;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white opacity-50 !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply opacity-100 !important;
+}
+
+.projects-swiper {
+  padding: 50px 0;
+}
+
+.projects-swiper .swiper-slide {
+  @apply opacity-50 transition-opacity duration-300;
+}
+
+.projects-swiper .swiper-slide-active {
+  @apply opacity-100;
+}
+
+/* Remove navigation arrows since we're using autoplay */
+.swiper-button-prev,
+.swiper-button-next {
+  @apply hidden !important;
+}
